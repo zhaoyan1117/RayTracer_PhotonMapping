@@ -1,0 +1,24 @@
+Global Illumination with Photon Mapping.
+
+Note: this part of project is designed for both Mac and Linux environment.
+	  Linux user should use apt-get to install freeimage before using the program.
+
+Compile: Simply type "make".
+
+Run: "./raytracer" [test file] [obj files if any]
+
+.test file format:
+The .test input file follows the general format specified in 
+http://inst.eecs.berkeley.edu/~cs184/fa12/assignments/hw5.pdf
+
+Additional features are specified by the following input format:
+di bool: determine the on/off of the direct illumination part
+ci bool: determine the on/off of the caustic part
+ii bool: determine the on/off of the indirect illumination part
+glossy float: specify the glossy ratio of an specular object
+SPP int: determine the on/off of distributed ray tracing feature with int as samples per pixel.
+camera x x x x x x x x x x focal_dist clip: The camera command has two extra optional options. focal dist with default 1 		  and clip with defaul 0.
+
+.obj file input:
+You can also input additional .obj file besides the .test file to add object into the scene.
+A .obj file can also be added with transformation matrix to change the location, size, and orientation of the object.
